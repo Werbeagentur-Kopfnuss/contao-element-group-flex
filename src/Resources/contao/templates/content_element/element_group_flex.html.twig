@@ -1,0 +1,25 @@
+{# templates/content_element/element_group_flex.html.twig #}
+{% extends "@Contao/content_element/_base.html.twig" %}
+
+{% set flex_class = '' %}
+{% if data.flex == '2 Elemente nebeneinander' %}
+    {% set flex_class = 'flex-50' %}
+{% elseif data.flex == '3 Elemente nebeneinander' %}
+    {% set flex_class = 'flex-30' %}
+{% elseif data.flex == '4 Elemente nebeneinander' %}
+    {% set flex_class = 'flex-25' %}
+{% elseif data.flex == '6 Elemente nebeneinander' %}
+    {% set flex_class = 'flex-16' %}
+{% endif %}
+
+{% set attributes = attrs()
+    .addClass(flex_class)
+%}
+
+{% block content %}
+    {% for fragment in nested_fragments %}
+        <div class="content-element-group-flex-item">
+            {{ content_element(fragment) }}
+        </div>
+    {% endfor %}
+{% endblock %}

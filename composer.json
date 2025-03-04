@@ -1,0 +1,17 @@
+{
+    "name": "agenturkopfnuss/contao-element-group-flex",
+    "description": "This Contao extension uses the element group to display multiple elements next to each other.",
+    "type": "contao-bundle",
+    "require": {
+        "contao/core-bundle": "^5.3"
+    },
+    "license": "LGPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "AgenturKopfnuss\\ContaoElementGroupFlex\\": "src/"
+        }
+    },
+    "extra": {
+         "contao-manager-plugin": "agenturkopfnuss\\ContaoElementGroupFlex\\ContaoManager\\Plugin"
+    }
+}

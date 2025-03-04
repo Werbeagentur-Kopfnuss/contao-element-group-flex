@@ -1,0 +1,4 @@
+# config/routes.yaml
+agenturkopfnuss.contao_element_group_flex.controller:
+    resource: ../src/Controller
+    type: attribute
