@@ -4,5 +4,9 @@ services:
         autoconfigure: true
 
     agenturkopfnuss\ContaoElementGroupFlex\:
-        resource: ../src
-        exclude: ../src/{ContaoManager,DependencyInjection}
+        resource: '../src'
+        exclude: '../src/{ContaoManager,DependencyInjection,Resources/contao/dca/*,Resources/contao/languages/*/*,Resources/contao/config/*}'
+
+    agenturkopfnuss\ContaoElementGroupFlex\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']

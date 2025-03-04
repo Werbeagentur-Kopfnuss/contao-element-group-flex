@@ -8,7 +8,7 @@
     "license": "LGPL-3.0-or-later",
     "autoload": {
         "psr-4": {
-            "AgenturKopfnuss\\ContaoElementGroupFlex\\": "src/"
+            "agenturkopfnuss\\ContaoElementGroupFlex\\": "src/"
         }
     },
     "extra": {
