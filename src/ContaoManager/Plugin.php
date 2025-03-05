@@ -1,17 +1,6 @@
 <?php
 // src/ContaoManager/Plugin.php
 
-declare(strict_types=1);
-
-/*
- * Element Group Flex for Contao Open Source CMS.
- *
- * @copyright  Copyright (c) 2025, Agentur KOPFNUSS
- * @author     Agentur KOPFNUSS <https://werbeagentur-kopfnuss.de>
- * @license    MIT
- * @link
- */
-
 namespace agenturkopfnuss\ContaoElementGroupFlex\ContaoManager;
 
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;

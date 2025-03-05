@@ -1,5 +1,5 @@
 <?php
-// filepath: ../contao/dca/tl_content.php
+// src/Resources/contao/dca/tl_content.php
 
 use Contao\DataContainer\PaletteManipulator;
 
