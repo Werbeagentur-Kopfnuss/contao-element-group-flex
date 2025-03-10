@@ -18,7 +18,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['flex'] = [
     ],
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['flexOptions'],
     'eval' => ['mandatory' => true, 'includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'],
-    'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
+    'sql' => ['type' => 'string', 'length' => 16, 'default' => ''],
 ];
 
 // Add new field
