@@ -3,7 +3,11 @@
     "description": "This Contao extension uses the element group to display multiple elements next to each other.",
     "type": "contao-bundle",
     "require": {
-        "contao/core-bundle": "^5.3"
+        "php": ">=8.1",
+        "contao/core-bundle": "^5.3",
+        "symfony/dependency-injection": "^5.4 || ^6.4 || ^7.1",
+        "symfony/http-foundation": "^5.4 || ^6.4 || ^7.1",
+        "symfony/http-kernel": "^5.4 || ^6.4 || ^7.1"
     },
     "license": "LGPL-3.0-or-later",
     "autoload": {
@@ -12,6 +16,17 @@
         }
     },
     "extra": {
-         "contao-manager-plugin": "agenturkopfnuss\\ContaoElementGroupFlex\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "agenturkopfnuss\\ContaoElementGroupFlex\\ContaoManager\\Plugin"
+    },
+    "require-dev": {
+        "contao/easy-coding-standard": "^6.0",
+        "contao/rector": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "php-http/discovery": false,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
