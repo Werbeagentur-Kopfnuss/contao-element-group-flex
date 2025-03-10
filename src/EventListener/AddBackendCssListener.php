@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace agenturkopfnuss\ContaoElementGroupFlex\EventListener;
 
 use Contao\CoreBundle\Routing\ScopeMatcher;
@@ -13,11 +15,10 @@ class AddBackendCssListener
     public function __construct(
         private readonly ScopeMatcher $scopeMatcher,
         private readonly Packages $packages,
-    )
-    {
+    ) {
     }
 
-    private function __invoke(RequestEvent $event): void
+    public function __invoke(RequestEvent $event): void
     {
         if (!$this->scopeMatcher->isBackendMainRequest($event)) {
             return;
