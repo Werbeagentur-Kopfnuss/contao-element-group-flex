@@ -1,0 +1,15 @@
+{# src/templates/content_element/element_group_flex.html.twig #}
+{% extends "@Contao/content_element/_base.html.twig" %}
+
+{% set attributes = attrs()
+    .addClass(data.flex|default(''))
+    .mergeWith(attributes|default)
+%}
+
+{% block content %}
+    {% for fragment in nested_fragments %}
+        <div class="content-element-group-flex-item">
+            {{ content_element(fragment) }}
+        </div>
+    {% endfor %}
+{% endblock %}
