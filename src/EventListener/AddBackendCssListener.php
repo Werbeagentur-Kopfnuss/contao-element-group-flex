@@ -24,6 +24,6 @@ class AddBackendCssListener
             return;
         }
 
-        $GLOBALS['TL_CSS'][] = $this->packages->getUrl('backend.css', 'agenturkopfnuss/contao-element-group-flex');
+        $GLOBALS['TL_CSS'][] = $this->packages->getUrl('backend.css', 'contao_element_group_flex');
     }
 }
