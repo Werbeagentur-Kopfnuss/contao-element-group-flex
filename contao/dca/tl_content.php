@@ -11,26 +11,26 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['element_group_flex'] = '{type_lege
 $GLOBALS['TL_DCA']['tl_content']['fields']['flex_align'] = [
     'inputType' => 'select',
     'options' => [
-        'flex-align-start',
-        'flex-align-center',
-        'flex-align-end',
+        'flex-group--align-start',
+        'flex-group--align-center',
+        'flex-group--align-end',
     ],
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['flexOptionsAlign'],
     'eval' => ['mandatory' => true, 'includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'],
-    'sql' => ['type' => 'string', 'length' => 16, 'default' => ''],
+    'sql' => ['type' => 'string', 'length' => 32, 'default' => ''],
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['flex_justify'] = [
     'inputType' => 'select',
     'options' => [
-        'flex-justify-start',
-        'flex-justify-center',
-        'flex-justify-end',
-        'flex-justify-space-between',
+        'flex-group--justify-start',
+        'flex-group--justify-center',
+        'flex-group--justify-end',
+        'flex-group--justify-space-between',
     ],
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['flexOptionsJustify'],
     'eval' => ['mandatory' => true, 'includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'],
-    'sql' => ['type' => 'string', 'length' => 16, 'default' => ''],
+    'sql' => ['type' => 'string', 'length' => 32, 'default' => ''],
 ];
 
 // Add new field

@@ -2,14 +2,13 @@
 {% extends "@Contao/content_element/_base.html.twig" %}
 
 {% set attributes = attrs()
-    .addClass(data.flex|default(''))
+    .addClass('flex-group')
+    .addClass([data.flex_align|default(''), data.flex_justify|default('')])
     .mergeWith(attributes|default)
 %}
 
 {% block content %}
     {% for fragment in nested_fragments %}
-        <div class="content-element-group-flex-item">
-            {{ content_element(fragment) }}
-        </div>
+        {{ content_element(fragment) }}
     {% endfor %}
 {% endblock %}
