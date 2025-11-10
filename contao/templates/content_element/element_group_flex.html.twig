@@ -3,7 +3,7 @@
 
 {% set attributes = attrs()
     .addClass('flex-group')
-    .addClass([data.flex_align|default(''), data.flex_justify|default('')])
+    .addClass(['flex-group--' ~ data.flex_align|default(''), 'flex-group--' ~ data.flex_justify|default('')])
     .mergeWith(attributes|default)
 %}
 

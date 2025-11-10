@@ -11,9 +11,9 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['element_group_flex'] = '{type_lege
 $GLOBALS['TL_DCA']['tl_content']['fields']['flex_align'] = [
     'inputType' => 'select',
     'options' => [
-        'flex-group--align-start',
-        'flex-group--align-center',
-        'flex-group--align-end',
+        'align-start',
+        'align-center',
+        'align-end',
     ],
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['flexOptionsAlign'],
     'eval' => ['mandatory' => true, 'includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'],
@@ -23,10 +23,10 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['flex_align'] = [
 $GLOBALS['TL_DCA']['tl_content']['fields']['flex_justify'] = [
     'inputType' => 'select',
     'options' => [
-        'flex-group--justify-start',
-        'flex-group--justify-center',
-        'flex-group--justify-end',
-        'flex-group--justify-space-between',
+        'justify-start',
+        'justify-center',
+        'justify-end',
+        'justify-space-between',
     ],
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['flexOptionsJustify'],
     'eval' => ['mandatory' => true, 'includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'],
