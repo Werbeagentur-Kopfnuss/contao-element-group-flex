@@ -7,6 +7,12 @@
     .mergeWith(attributes|default)
 %}
 
+{% block wrapper %}
+    <div class="content-collection">
+        {{ parent() }}
+    </div>
+{% endblock %}
+
 {% block content %}
     {% for fragment in nested_fragments %}
         {{ content_element(fragment) }}
