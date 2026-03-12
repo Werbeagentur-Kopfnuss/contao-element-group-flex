@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 $GLOBALS['TL_LANG']['tl_content']['custom_flex_legend'] = 'Welche Flex-Option soll verwendet werden?';
-$GLOBALS['TL_LANG']['tl_content']['flex_align'] = ['Flex-Option', 'Bitte wählen Sie die Ausrichtung der Elemente in der Flex-Gruppe.'];
-$GLOBALS['TL_LANG']['tl_content']['flex_justify'] = ['Flex-Option', 'Bitte wählen Sie die Anordnung der Elemente in der Flex-Gruppe.'];
+$GLOBALS['TL_LANG']['tl_content']['flex_align'] = ['Ausrichtung der Elemente', 'Bitte wählen Sie die Ausrichtung der Elemente in der Flex-Gruppe.'];
+$GLOBALS['TL_LANG']['tl_content']['flex_justify'] = ['Anordnung der Elemente', 'Bitte wählen Sie die Anordnung der Elemente in der Flex-Gruppe.'];
 $GLOBALS['TL_LANG']['tl_content']['flexOptionsAlign'] = [
     'align-start' => 'Elemente oben platzieren',
     'align-center' => 'Elemente zentriert platzieren',
