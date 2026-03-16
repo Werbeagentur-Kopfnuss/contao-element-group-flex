@@ -1,0 +1,10 @@
+services:
+  agenturkopfnuss\ContaoElementGroupFlex\Controller\ContentElement\ElementGroupFlex:
+    arguments:
+      $allowedTypes: '%contao_element_group_flex.allowed_types%'
+    tags:
+      - name: content.element
+        category: miscellaneous
+        template: content_element/element_group_flex
+        nested_fragments:
+          allowedTypes: '%contao_element_group_flex.allowed_types%'

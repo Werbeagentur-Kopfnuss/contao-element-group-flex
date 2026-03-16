@@ -11,9 +11,12 @@ use Contao\CoreBundle\Twig\FragmentTemplate;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-#[AsContentElement(category: 'miscellaneous', nestedFragments: ['allowedTypes' => ['image', 'text', 'player', 'table', 'headline', 'element_group', 'accordion', 'rsce_icon_text']], template: 'content_element/element_group_flex')]
+#[AsContentElement(category: 'miscellaneous', template: 'content_element/element_group_flex')]
 class ElementGroupFlex extends AbstractContentElementController
 {
+    public function __construct(
+        private readonly array $allowedTypes
+    ) {}
     protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
     {
         return $template->getResponse();
