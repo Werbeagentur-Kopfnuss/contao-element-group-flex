@@ -18,7 +18,7 @@ class ContaoElementGroupFlex extends AbstractBundle
             ->children()
                 ->arrayNode('allowed_types')
                     ->scalarPrototype()->end()
-                    ->defaultValue(['image', 'text', 'player', 'table', 'headline', 'element_group', 'accordion', 'rsce_icon_text'])
+                    ->defaultValue(['image', 'text', 'player', 'table', 'headline', 'element_group', 'accordion'])
                 ->end()
             ->end()
         ;
