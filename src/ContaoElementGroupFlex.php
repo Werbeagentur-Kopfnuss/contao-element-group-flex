@@ -12,11 +12,17 @@ class ContaoElementGroupFlex extends AbstractBundle
 {
     public function loadExtension(array $config, ContainerConfigurator $containerConfigurator, ContainerBuilder $containerBuilder): void
     {
+        // Config verarbeiten
+        $processedConfig = $this->processConfiguration(new \agenturkopfnuss\ContaoElementGroupFlex\DependencyInjection\Configuration(), $config);
+
+        // Parameter in den Container schreiben
+        $containerBuilder->setParameter('contao_element_group_flex.allowed_types', $processedConfig['allowed_types']);
+
         $services = $containerConfigurator->services();
         $services
             ->defaults()
-                ->autoconfigure()
-                ->autowire()
+            ->autoconfigure()
+            ->autowire()
         ;
 
         $services
@@ -25,6 +31,12 @@ class ContaoElementGroupFlex extends AbstractBundle
                 'ContaoManager',
                 'ContaoElementGroupFlex.php',
             ])
+        ;
+
+        // Explizit den Array-Parameter setzen
+        $services
+            ->set(\agenturkopfnuss\ContaoElementGroupFlex\Controller\ContentElement\ElementGroupFlex::class)
+            ->arg('$allowedTypes', '%contao_element_group_flex.allowed_types%')
         ;
     }
 }
